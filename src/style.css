@@ -1,0 +1,253 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand-primary: #1d4ed8;
+  --brand-secondary: #0f172a;
+  --brand-on-primary: #ffffff;
+  --brand-on-secondary: #ffffff;
+  --brand-primary-soft: #1d4ed81a;
+  --brand-secondary-soft: #0f172a1a;
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: rgb(248 250 252);
+  color: rgb(51 65 85);
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background-color: var(--brand-primary);
+  color: white;
+}
+
+/* Global PrimeVue button branding */
+.p-button:not(.p-button-outlined):not(.p-button-text):not(.p-button-link):not(
+    .p-button-secondary
+  ):not(.p-button-success):not(.p-button-info):not(.p-button-warn):not(
+    .p-button-help
+  ):not(.p-button-danger):not(.p-button-contrast) {
+  background: var(--brand-primary) !important;
+  border-color: var(--brand-primary) !important;
+  color: var(--brand-on-primary) !important;
+}
+
+.p-button:not(.p-button-outlined):not(.p-button-text):not(.p-button-link):not(
+    .p-button-secondary
+  ):not(.p-button-success):not(.p-button-info):not(.p-button-warn):not(
+    .p-button-help
+  ):not(.p-button-danger):not(.p-button-contrast):enabled:hover {
+  background: color-mix(in srgb, var(--brand-primary) 88%, black) !important;
+  border-color: color-mix(in srgb, var(--brand-primary) 88%, black) !important;
+  color: var(--brand-on-primary) !important;
+}
+
+.p-button:not(.p-button-outlined):not(.p-button-text):not(.p-button-link):not(
+    .p-button-secondary
+  ):not(.p-button-success):not(.p-button-info):not(.p-button-warn):not(
+    .p-button-help
+  ):not(.p-button-danger):not(.p-button-contrast):enabled:active {
+  background: color-mix(in srgb, var(--brand-primary) 78%, black) !important;
+  border-color: color-mix(in srgb, var(--brand-primary) 78%, black) !important;
+}
+
+.p-button:not(.p-button-outlined):not(.p-button-text):not(.p-button-link):not(
+    .p-button-secondary
+  ):not(.p-button-success):not(.p-button-info):not(.p-button-warn):not(
+    .p-button-help
+  ):not(.p-button-danger):not(.p-button-contrast):focus-visible {
+  box-shadow: 0 0 0 0.2rem
+    color-mix(in srgb, var(--brand-primary) 35%, transparent) !important;
+}
+
+.p-button.p-button-secondary:not(.p-button-outlined):not(.p-button-text):not(
+    .p-button-link
+  ) {
+  background: var(--brand-secondary) !important;
+  border-color: var(--brand-secondary) !important;
+  color: var(--brand-on-secondary) !important;
+}
+
+.p-button.p-button-secondary:not(.p-button-outlined):not(.p-button-text):not(
+    .p-button-link
+  ):enabled:hover {
+  background: color-mix(in srgb, var(--brand-secondary) 88%, black) !important;
+  border-color: color-mix(in srgb, var(--brand-secondary) 88%, black) !important;
+  color: var(--brand-on-secondary) !important;
+}
+
+.p-button.p-button-secondary:not(.p-button-outlined):not(.p-button-text):not(
+    .p-button-link
+  ):enabled:active {
+  background: color-mix(in srgb, var(--brand-secondary) 78%, black) !important;
+  border-color: color-mix(in srgb, var(--brand-secondary) 78%, black) !important;
+}
+
+.p-button.p-button-secondary:not(.p-button-outlined):not(.p-button-text):not(
+    .p-button-link
+  ):focus-visible {
+  box-shadow: 0 0 0 0.2rem
+    color-mix(in srgb, var(--brand-secondary) 35%, transparent) !important;
+}
+
+.p-button.p-button-outlined:not(.p-button-secondary):not(.p-button-success):not(
+    .p-button-info
+  ):not(.p-button-warn):not(.p-button-help):not(.p-button-danger):not(
+    .p-button-contrast
+  ) {
+  background: transparent !important;
+  border-color: color-mix(
+    in srgb,
+    var(--brand-primary) 70%,
+    var(--brand-secondary) 30%
+  ) !important;
+  color: color-mix(
+    in srgb,
+    var(--brand-primary) 78%,
+    var(--brand-secondary) 22%
+  ) !important;
+}
+
+.p-button.p-button-outlined:not(.p-button-secondary):not(.p-button-success):not(
+    .p-button-info
+  ):not(.p-button-warn):not(.p-button-help):not(.p-button-danger):not(
+    .p-button-contrast
+  ):enabled:hover {
+  background: color-mix(
+    in srgb,
+    var(--brand-primary) 12%,
+    transparent
+  ) !important;
+  border-color: var(--brand-primary) !important;
+  color: color-mix(
+    in srgb,
+    var(--brand-primary) 86%,
+    var(--brand-secondary) 14%
+  ) !important;
+}
+
+.p-button.p-button-outlined:not(.p-button-secondary):not(.p-button-success):not(
+    .p-button-info
+  ):not(.p-button-warn):not(.p-button-help):not(.p-button-danger):not(
+    .p-button-contrast
+  ):enabled:active {
+  background: color-mix(
+    in srgb,
+    var(--brand-primary) 18%,
+    transparent
+  ) !important;
+}
+
+.p-button.p-button-text:not(.p-button-secondary):not(.p-button-success):not(
+    .p-button-info
+  ):not(.p-button-warn):not(.p-button-help):not(.p-button-danger):not(
+    .p-button-contrast
+  ) {
+  color: color-mix(
+    in srgb,
+    var(--brand-primary) 80%,
+    var(--brand-secondary) 20%
+  ) !important;
+}
+
+.p-button.p-button-text:not(.p-button-secondary):not(.p-button-success):not(
+    .p-button-info
+  ):not(.p-button-warn):not(.p-button-help):not(.p-button-danger):not(
+    .p-button-contrast
+  ):enabled:hover {
+  background: color-mix(
+    in srgb,
+    var(--brand-primary) 12%,
+    transparent
+  ) !important;
+  color: var(--brand-primary) !important;
+}
+
+.p-button.p-button-text:not(.p-button-secondary):not(.p-button-success):not(
+    .p-button-info
+  ):not(.p-button-warn):not(.p-button-help):not(.p-button-danger):not(
+    .p-button-contrast
+  ):enabled:active {
+  background: color-mix(
+    in srgb,
+    var(--brand-primary) 18%,
+    transparent
+  ) !important;
+}
+
+.p-button.p-button-outlined.p-button-secondary {
+  background: transparent !important;
+  border-color: var(--brand-secondary) !important;
+  color: var(--brand-secondary) !important;
+}
+
+.p-button.p-button-outlined.p-button-secondary:enabled:hover {
+  background: color-mix(
+    in srgb,
+    var(--brand-secondary) 12%,
+    transparent
+  ) !important;
+  border-color: color-mix(in srgb, var(--brand-secondary) 88%, black) !important;
+  color: color-mix(in srgb, var(--brand-secondary) 88%, black) !important;
+}
+
+.p-button.p-button-outlined.p-button-secondary:enabled:active {
+  background: color-mix(
+    in srgb,
+    var(--brand-secondary) 18%,
+    transparent
+  ) !important;
+}
+
+.p-button.p-button-text.p-button-secondary {
+  color: var(--brand-secondary) !important;
+}
+
+.p-button.p-button-text.p-button-secondary:enabled:hover {
+  background: color-mix(
+    in srgb,
+    var(--brand-secondary) 12%,
+    transparent
+  ) !important;
+  color: color-mix(in srgb, var(--brand-secondary) 88%, black) !important;
+}
+
+.p-button.p-button-text.p-button-secondary:enabled:active {
+  background: color-mix(
+    in srgb,
+    var(--brand-secondary) 18%,
+    transparent
+  ) !important;
+}
+
+.p-button.p-button-outlined:focus-visible:not(.p-button-secondary),
+.p-button.p-button-text:focus-visible:not(.p-button-secondary) {
+  box-shadow: 0 0 0 0.2rem
+    color-mix(in srgb, var(--brand-primary) 35%, transparent) !important;
+}
+
+.p-button.p-button-outlined.p-button-secondary:focus-visible,
+.p-button.p-button-text.p-button-secondary:focus-visible {
+  box-shadow: 0 0 0 0.2rem
+    color-mix(in srgb, var(--brand-secondary) 35%, transparent) !important;
+}
