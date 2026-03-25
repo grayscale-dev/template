@@ -25,6 +25,9 @@
 - siteName:
 - primaryColor:
 - secondaryColor:
+- primeBlocksAccess:
+- primeBlocksDelivery:
+- primeBlocksLocalPath:
 - useSupabase:
 
 ## Autonomous Design Inference (Required Before Build)
@@ -49,6 +52,7 @@
 
 ## PrimeBlocks Discovery Log (Required Before Build)
 
+- source used (`local component library` or `public catalog`):
 - candidate blocks reviewed (minimum 6):
 - selected block patterns + rationale:
 - rejected patterns + rationale:
@@ -88,6 +92,8 @@
 - [ ] Inspect optional inspiration website (if provided)
 - [ ] Confirm navigation and primary CTA paths
 - [ ] Update `site-remodel.config.json`
+- [ ] Verify PrimeBlocks delivery/source (`catalog` or `local`)
+- [ ] If `local`, inspect and search `primeBlocksLocalPath` for candidates
 - [ ] Complete autonomous design inference
 - [ ] Define 2-3 design directions and select one
 - [ ] Review PrimeBlocks and log chosen patterns

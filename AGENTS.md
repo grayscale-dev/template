@@ -107,6 +107,18 @@ For each remodel, review PrimeBlocks patterns and log:
 
 Document this in `remodel-plan.md`.
 
+PrimeBlocks source selection is config-driven:
+
+- if `primeBlocksDelivery` is `catalog`, use the online catalog
+- if `primeBlocksDelivery` is `local`, use `primeBlocksLocalPath`
+
+When `primeBlocksDelivery` is `local`, treat `primeBlocksLocalPath` as
+the primary block source and actively review it during planning.
+
+If authenticated catalog content is inaccessible during a run, switch to
+`local` mode and continue from `primeBlocksLocalPath`. If the local path
+is missing or incomplete, require user-provided premium snippets.
+
 ### 7. Creative freedom is expected
 
 Use strong creative judgment for layout and design while staying inside
@@ -165,7 +177,11 @@ Before major implementation work:
 1. Read `site-remodel.config.json`
 2. Inspect the source website
 3. Inspect `inspirationUrl` if provided
-4. Identify:
+4. Inspect PrimeBlocks by configured delivery mode when
+   `primeBlocksAccess` is `full`:
+   - `catalog`: inspect online catalog patterns
+   - `local`: inspect `primeBlocksLocalPath`
+5. Identify:
    - business type
    - target audience
    - navigation structure
@@ -176,7 +192,7 @@ Before major implementation work:
    - content weaknesses
    - design weaknesses
    - visual opportunities
-5. Complete `remodel-plan.md`
+6. Complete `remodel-plan.md`
 
 `remodel-plan.md` must include:
 
@@ -188,7 +204,7 @@ Before major implementation work:
 - autonomous design inference
 - 2-3 design directions
 - selected direction rationale
-- PrimeBlocks discovery log
+- PrimeBlocks discovery log (including source used)
 - variation commitments
 - page-by-page rebuild plan
 - design notes
@@ -223,6 +239,9 @@ Respect:
 
 - `sourceUrl`
 - `inspirationUrl`
+- `primeBlocksAccess`
+- `primeBlocksDelivery`
+- `primeBlocksLocalPath`
 - `siteName`
 - `primaryColor`
 - `secondaryColor`
@@ -248,6 +267,9 @@ Intentionally vary at least 6 of these axes and record them in
 - CTA emphasis pattern
 - imagery treatment
 - iconography style
+
+When `primeBlocksAccess` is `full`, selected block patterns should come
+from the configured delivery source unless a documented gap exists.
 
 ### Design priorities
 
@@ -309,4 +331,5 @@ When a remodel is complete, provide:
    - what assets were reused
    - what placeholders remain
    - whether Supabase was used
+   - whether local full-access PrimeBlocks were used
    - what inspiration and PrimeBlocks patterns were applied

@@ -11,6 +11,9 @@ node_modules
 dist
 dist-ssr
 *.local
+.primeblocks/*
+!.primeblocks/README.md
+primeblocks-export/
 
 # Editor directories and files
 .vscode/*

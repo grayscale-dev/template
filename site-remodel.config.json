@@ -2,6 +2,9 @@
   "siteName": "Website Remodel Starter",
   "sourceUrl": "https://example.com",
   "inspirationUrl": "",
+  "primeBlocksAccess": "full",
+  "primeBlocksDelivery": "local",
+  "primeBlocksLocalPath": "../components",
   "primaryColor": "#1d4ed8",
   "secondaryColor": "#0f172a",
   "useSupabase": false
